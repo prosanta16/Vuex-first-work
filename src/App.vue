@@ -2,11 +2,12 @@
     <div id="app">
         <compBookListOne ></compBookListOne>
         <compBookListTwo ></compBookListTwo>
-        <button class="btn btn-success" @click="rp">Reduce Price</button>
+        <button class="btn btn-success" @click="reducePrice">Reduce Price</button>
     </div>
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 import compBookListOne from "./components/BookListOne"
 import compBookListTwo from "./components/BookListTwo"
 export default {
@@ -15,9 +16,9 @@ export default {
       compBookListTwo
     },
     methods:{
-        rp(){
-            this.$store.dispatch('reducePrice');
-        }
+        ...mapActions([
+            'reducePrice'
+        ])
     }
 }
 </script>
