@@ -13,12 +13,11 @@
 <script>
 
 export default {
-    props: ['book'],
-    data(){
-        return{
-            
-        }
-    }
+   computed:{
+       book(){
+           return this.$store.state.books;
+       }
+   }
 }
 </script>
 
