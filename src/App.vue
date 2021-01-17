@@ -16,7 +16,7 @@ export default {
     },
     methods:{
         rp(){
-            this.$store.commit('reducePrice');
+            this.$store.dispatch('reducePrice');
         }
     }
 }

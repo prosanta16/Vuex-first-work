@@ -32,5 +32,12 @@ export const store=new Vuex.Store({
             })
 
         }
+    },
+    actions:{
+      reducePrice:(context) =>{
+          setTimeout(() => {
+              context.commit('reducePrice');
+          }, 2000);
+      }
     }
 })
