@@ -24,8 +24,13 @@ export const store=new Vuex.Store({
             return saleBook;
  
         }
+    },
+    mutations:{
+        reducePrice:(state)=>{
+            state.books.forEach((book)=>{
+                book.price -=1
+            })
+
+        }
     }
-
-    
-
 })
